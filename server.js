@@ -71,7 +71,7 @@ app.post('/send', async (req, res) => {
     console.log(`Versuche E-Mail zu senden an: ${to}`);
 
     // SMTP Transporter erstellen
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: smtp_host,
       port: parseInt(smtp_port),
       secure: smtp_port == 465, // true für Port 465, false für andere Ports
